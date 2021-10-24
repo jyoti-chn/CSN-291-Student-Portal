@@ -96,3 +96,15 @@ span{
 #register{
 	left: 50px;
 }
+
+.create-exam-form{
+	display: flex;
+	flex-direction: column;
+}
+.create-exam-form input{
+	width : 15rem;
+}
+.create-exam-form button {
+	width: 7rem;
+	height: 1.5rem;
+}

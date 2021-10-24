@@ -20,4 +20,4 @@ const createExam = async newObject => {
     return response.data
 }
 
-export default { getExams, createExam }
+export default { getExams, createExam, setToken }

@@ -7,7 +7,7 @@ import registerService from '../services/register'
 
 const LoginForm = ({ username, setUsername, password, setPassword, setUser }) => {
 
-
+    
 
     const [loginState, setLoginState] = useState(true)
     const [newUserName, setNewUserName] = useState('')
@@ -32,6 +32,10 @@ const LoginForm = ({ username, setUsername, password, setPassword, setUser }) =>
 
             const user = await loginService
                 .login({ username, password })
+
+            window.localStorage.setItem(
+                'loggedinUser', JSON.stringify(user)
+            )
             setUser(user)
             setUsername('')
             setPassword('')
