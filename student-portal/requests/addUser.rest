@@ -1,0 +1,11 @@
+POST http://localhost:3001/api/users/
+Content-Type: application/json
+
+{
+    "exams": [],
+    "username" : "Hayley",
+    "name": "Hayley Williams",
+    "password": "Hayley",
+    "profession" : "Professor",
+    "email" : "hayley.williams@gmail.com"
+}

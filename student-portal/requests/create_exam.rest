@@ -1,0 +1,9 @@
+POST http://localhost:3001/api/exams/
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJlY2siLCJpZCI6IjYxNzFhOWQ4ZGU4OTI4OWYxM2ZlNDUyYSIsImlhdCI6MTYzNDg3NTgxMSwiZXhwIjoxNjM1MDkxODExfQ.-BsPMKixyrHyg44sGYStbCcDWn7HecxzKmja2GtGiAQ
+
+{
+   "subject": "Geology",
+    "date": "16/11/2022",
+    "syllabus": "chapter 10"
+}
