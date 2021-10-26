@@ -20,8 +20,11 @@ const AddExam = ({user}) => {
         try{
           const addNewExam = await examService
             .createExam(newExam)
-
-            console.log(addNewExam)
+            console.log('Added successfully')
+            setSubject('')
+            setsyllabus('')
+            setDate('')
+            window.location.reload()
             
         }
         catch{

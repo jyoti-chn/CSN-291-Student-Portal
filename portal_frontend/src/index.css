@@ -1,5 +1,5 @@
 body{
-	background-color: #fff;
+	background : #ffffff;
 }
 *{
 	margin: 0;
@@ -107,4 +107,16 @@ span{
 .create-exam-form button {
 	width: 7rem;
 	height: 1.5rem;
+}
+
+.nav-bar ul{
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	margin: 3rem;
+}
+
+.nav-bar ul li{
+	margin-inline : 7rem;
+	cursor: pointer;
 }
