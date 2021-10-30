@@ -29,4 +29,4 @@ tutorialSchema.set('toJSON', {
   }
 })
 
-module.exports = mongoose.model('Exam', tutorialSchema)
+module.exports = mongoose.model('Tut', tutorialSchema)

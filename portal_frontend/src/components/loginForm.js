@@ -74,6 +74,7 @@ const LoginForm = ({ username, setUsername, password, setPassword, setUser }) =>
             setPassword('')
             setEmail('')
             setnewProfession('')
+            window.location.reload()
         }
         catch {
             console.log('unable to register')

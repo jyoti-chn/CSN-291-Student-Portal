@@ -6,9 +6,9 @@ const userSchema = new mongoose.Schema({
     type: String,
     unique: true
   },
-  email : {
-    type : String,
-    unique : true
+  email: {
+    type: String,
+    unique: true
   },
   name: String,
   passwordHash: String,
@@ -16,11 +16,18 @@ const userSchema = new mongoose.Schema({
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Exam'
+
     }
   ],
-  profession : [
+  tuts: [
     {
-      type : String
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Tut'
+    }
+  ],
+  profession: [
+    {
+      type: String
     }
   ]
 })

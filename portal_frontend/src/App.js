@@ -5,6 +5,11 @@ import LoginForm from './components/loginForm';
 import loginService from './services/login'
 import exams from './services/exams';
 import AddExam from './components/addExam';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import NavBar from './components/nav';
+import HomePage from './components/HomePage';
+import Profile from './components/Profile';
+
 
 
 const App = () => {
@@ -12,6 +17,16 @@ const App = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [user, setUser] = useState(null)
+  const [home, setHome] = useState(false)
+  const [deadlines, setDeadlines] = useState(false)
+  const [myProfile, setProfile] = useState(false)
+
+
+  if (!user)
+    document.body.style.backgroundColor = '#ff105f';
+  else
+    document.body.style.backgroundColor = '#ffffff';
+
 
 
   useEffect(() => {
@@ -42,24 +57,43 @@ const App = () => {
     )
   }
 
-  const logout = () => { 
+  const logout = () => {
     window.localStorage.clear()
     window.location.reload()
-    return 
+    return
   }
 
-// console.log(user)
-if(user)
-console.log(user.profession[0]==='Professor')
+  // console.log(user)
+
+  const ExamPage = () => {
+    return (
+      <>
+        {user && <h5>Logged in as {user.name}</h5>}
+        {user && ExamDisplayList()}
+        {user && <button onClick={logout}>Log Out</button>}
+        <br></br>
+        {user && user.profession[0] === 'Professor' && <AddExam user={user} />}
+      </>
+    )
+  }
+
+console.log('home is', home)
+
   return (
     <div>
-    {user &&  <h5>Logged in as {user.name}</h5>}
-      {!user && <LoginForm username={username} setUsername={setUsername} password={password} setPassword={setPassword} setUser={setUser} />}
-      {user && ExamDisplayList()}
-      {user && <button onClick={logout}>Log Out</button>}
-      <br></br>
-      {user && user.profession[0]==='Professor' && <AddExam user={user}/>}
+      <div>
+        
+        {!user && <LoginForm username={username} setUsername={setUsername} password={password} setPassword={setPassword} setUser={setUser} />}
+        {user && <NavBar setDeadlines={setDeadlines} setHome={setHome} setProfile={setProfile}/>}
+        {deadlines && <ExamPage/>}
+        {home && <HomePage/>}
+        {myProfile && <Profile/>}
+
+      </div>
+
+
     </div>
+
   );
 }
 
