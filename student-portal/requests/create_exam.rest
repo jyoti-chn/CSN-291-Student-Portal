@@ -1,9 +1,9 @@
 POST http://localhost:3001/api/exams/
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJlY2siLCJpZCI6IjYxNzFhOWQ4ZGU4OTI4OWYxM2ZlNDUyYSIsImlhdCI6MTYzNDg3NTgxMSwiZXhwIjoxNjM1MDkxODExfQ.-BsPMKixyrHyg44sGYStbCcDWn7HecxzKmja2GtGiAQ
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkhheWxleSIsImlkIjoiNjE3MTcwNWM4ZDFiYWU3MjIzNTE4YTY0IiwiaWF0IjoxNjM1MjI4NzI2LCJleHAiOjE2MzU0NDQ3MjZ9.ljGR3G6Sl46TmJucv_E3ulGYjHcWLAfwsRzNkIExaKw
 
 {
-   "subject": "Geology",
-    "date": "16/11/2022",
-    "syllabus": "chapter 10"
+   "subject": "Derivatives",
+    "date": "5/11/2021",
+    "syllabus": "Chapter 5, textbook 1"
 }
