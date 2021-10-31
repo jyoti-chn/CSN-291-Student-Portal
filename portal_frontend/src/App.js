@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import NavBar from './components/nav';
 import HomePage from './components/HomePage';
 import Profile from './components/Profile';
-
+import Deadlines from './components/Deadlines';
 
 
 const App = () => {
@@ -17,15 +17,16 @@ const App = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [user, setUser] = useState(null)
-  const [home, setHome] = useState(false)
+  const [home, setHome] = useState(true)
   const [deadlines, setDeadlines] = useState(false)
   const [myProfile, setProfile] = useState(false)
 
 
   if (!user)
-    document.body.style.backgroundColor = '#ff105f';
-  else
-    document.body.style.backgroundColor = '#ffffff';
+    document.body.style.backgroundColor = '#fffff';
+    
+  else if(user && deadlines)
+    document.body.style.backgroundColor = '#f67e7d';
 
 
 
@@ -78,6 +79,7 @@ const App = () => {
   }
 
 console.log('home is', home)
+console.log('deadlines is', deadlines)
 
   return (
     <div>
@@ -85,8 +87,8 @@ console.log('home is', home)
         
         {!user && <LoginForm username={username} setUsername={setUsername} password={password} setPassword={setPassword} setUser={setUser} />}
         {user && <NavBar setDeadlines={setDeadlines} setHome={setHome} setProfile={setProfile}/>}
-        {deadlines && <ExamPage/>}
-        {home && <HomePage/>}
+        {user && deadlines && <Deadlines examList={examList}/>}
+        {user && home && <HomePage/>}
         {myProfile && <Profile/>}
 
       </div>

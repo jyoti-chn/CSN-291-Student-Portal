@@ -87,7 +87,7 @@ const LoginForm = ({ username, setUsername, password, setPassword, setUser }) =>
             <form id="login" className="input-group" onSubmit={handleLogin}>
                 <input type="text" value={username} className="input-field" placeholder="User ID" required onChange={({ target }) => setUsername(target.value)} />
                 <input type="password" value={password} className="input-field" placeholder="Password" required onChange={({ target }) => setPassword(target.value)} />
-                <input type="checkbox" className="checkbox" /><span>Remember me</span>
+                <input type="checkbox" className="checkbox" /><span className='remember'>Remember me</span>
                 <button type="submit" className="submit-btn">Login</button>
             </form>
         )

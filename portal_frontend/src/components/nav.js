@@ -20,14 +20,15 @@ const NavBar = ({setDeadlines, setHome, setProfile}) => {
     }
 
    return (
-       <div>
-           <nav className='nav-bar'>
-               <ul>
-                   <li onClick={goToHome}>Home</li>
-                   <li onClick={goToDeadlines}>Deadlines</li>
-                   <li onClick={goToProfile}>My Profile</li>
-               </ul>
-           </nav>
+       <div style={{backgroundColor:'black'}}>
+           <ul class="nav-area">
+            <li onClick={goToHome}>Home</li>
+            <li>Timetable</li>
+            <li onClick={goToDeadlines}>Deadlines</li>
+            <li onClick={goToProfile}>Profile</li>
+            <li>Contact</li>
+          </ul>
+           
        </div>
    )
 }
