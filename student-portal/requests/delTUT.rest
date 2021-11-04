@@ -1,0 +1,1 @@
+DELETE http://localhost:3001/api/tuts/6182d3e901bd057a95754d95

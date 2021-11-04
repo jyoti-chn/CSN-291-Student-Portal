@@ -1,0 +1,7 @@
+POST http://localhost:3001/api/tuts/
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJlY2siLCJpZCI6IjYxNzFhOWQ4ZGU4OTI4OWYxM2ZlNDUyYSIsImlhdCI6MTYzNTk5NjQyNSwiZXhwIjoxNjM2MjEyNDI1fQ.N616icSYb_if_coy1gNFzI9hQKHeURoWoSWfggNf3y0
+
+{
+   "content" : "Complete academic paper analysis"
+}

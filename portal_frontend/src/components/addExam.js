@@ -15,7 +15,7 @@ const AddExam = ({ user }) => {
             syllabus: syllabus,
             date: date,
         }
-        // console.log(newExam);
+        // console.log(user);
 
         try {
             const addNewExam = await examService

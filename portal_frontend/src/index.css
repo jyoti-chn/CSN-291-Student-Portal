@@ -1,6 +1,4 @@
-body {
-	background: #ffffff;
-}
+
 
 * {
 	margin: 0;
@@ -378,9 +376,9 @@ body > header nav li.icon-address:active,body > header nav li.icon-address.activ
 	box-shadow:none;
 }
 body > header nav li.icon-graduation-cap:active,body > header nav li.icon-graduation-cap.active {
-	background:#EB2690;
-	border-left:1px solid #bf1f75;
-	border-top:1px solid #bf1f75;
+	background:#394a51;
+	border-left:1px solid #394a51;
+	border-top:1px solid #394a51;
 	box-shadow:none;
 }
 body > header nav li.icon-briefcase:active,body > header nav li.icon-briefcase.active {
@@ -430,11 +428,10 @@ div#timeline_container header figure img {
 }
 div#timeline_container header h1 {
 	position:absolute;
-	top:20px;
+	top:50px;
 	right:80px;
-	font-family: 'Lobster', cursive;
-	font-size:2.8em;
-	text-shadow:2px 2px 1px #fff;
+	font-family: 'Fira Mono', monospace;
+	font-size:2rem;
 	font-weight:normal;
 }
 div#timeline_container > ul {
@@ -495,7 +492,7 @@ div#timeline_container > ul > li div.event_icn,div#timeline_container > ul li.ac
 
 div#timeline_container > ul > li.life_event div.event_icn { background:#0ED1E7;}
 
-div#timeline_container > ul > li.education_event div.event_icn { background:#EB2690}
+div#timeline_container > ul > li.education_event div.event_icn { background:#394a51}
 
 div#timeline_container > ul > li.work_event div.event_icn { background:#E76B0E}
 
@@ -672,7 +669,7 @@ html {
 	margin:0;
 	padding:0;
 	font-family: sans-serif;
-	background: linear-gradient(#141e30, #243b55);
+	background: #22223b;
   }
   
   .login-box {
@@ -725,7 +722,7 @@ html {
   .login-box .user-box input:valid ~ label {
 	top: -20px;
 	left: 0;
-	color: #03e9f4;
+	color: #f2e9e4;;
 	font-size: 12px;
   }
   
@@ -733,7 +730,7 @@ html {
 	position: relative;
 	display: inline-block;
 	padding: 10px 20px;
-	color: #03e9f4;
+	color: #f2e9e4;
 	font-size: 16px;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -744,13 +741,13 @@ html {
   }
   
   .login-box a:hover {
-	background: #03e9f4;
-	color: #fff;
+	background: #f2e9e4;
+	color: rgb(5, 2, 2);
 	border-radius: 5px;
-	box-shadow: 0 0 5px #03e9f4,
-				0 0 25px #03e9f4,
-				0 0 50px #03e9f4,
-				0 0 100px #03e9f4;
+	box-shadow: 0 0 5px #f2e9e4,
+				0 0 25px #f2e9e4,
+				0 0 50px #f2e9e4,
+				0 0 100px #f2e9e4;
   }
   
   .login-box a span {
@@ -763,7 +760,7 @@ html {
 	left: -100%;
 	width: 100%;
 	height: 2px;
-	background: linear-gradient(90deg, transparent, #03e9f4);
+	background: linear-gradient(90deg, transparent, #f2e9e4);
 	animation: btn-anim1 1s linear infinite;
   }
   
@@ -781,7 +778,7 @@ html {
 	right: 0;
 	width: 2px;
 	height: 100%;
-	background: linear-gradient(180deg, transparent, #03e9f4);
+	background: linear-gradient(180deg, transparent, #f2e9e4);
 	animation: btn-anim2 1s linear infinite;
 	animation-delay: .25s
   }
@@ -800,7 +797,7 @@ html {
 	right: -100%;
 	width: 100%;
 	height: 2px;
-	background: linear-gradient(270deg, transparent, #03e9f4);
+	background: linear-gradient(270deg, transparent, #f2e9e4);
 	animation: btn-anim3 1s linear infinite;
 	animation-delay: .5s
   }
@@ -819,7 +816,7 @@ html {
 	left: 0;
 	width: 2px;
 	height: 100%;
-	background: linear-gradient(360deg, transparent, #03e9f4);
+	background: linear-gradient(360deg, transparent, #f2e9e4);
 	animation: btn-anim4 1s linear infinite;
 	animation-delay: .75s
   }
@@ -833,3 +830,117 @@ html {
 	}
   }
   
+  
+
+.todo-nav {
+    margin-top: 10px
+}
+
+.todo-list {
+    margin: 10px 0
+}
+
+.todo-list .todo-item {
+    padding: 15px;
+    margin: 1.5rem 1rem;
+    border-radius: 8px;
+    background: #9A8C98
+}
+
+.todo-list.only-active .todo-item.complete {
+    display: none
+}
+
+.todo-list.only-active .todo-item:not(.complete) {
+    display: block
+}
+
+.todo-list.only-complete .todo-item:not(.complete) {
+    display: none
+}
+
+.todo-list.only-complete .todo-item.complete {
+    display: block
+}
+
+.todo-list .todo-item.complete span {
+    text-decoration: line-through
+}
+
+.remove-todo-item {
+    color: #ccc;
+    visibility: hidden
+}
+
+.remove-todo-item:hover {
+    color: #5f5f5f
+}
+
+.todo-item:hover .remove-todo-item {
+    visibility: visible
+}
+
+.todo-item span{
+	color : rgb(29, 29, 29);
+	margin-left: 9px;
+
+}
+
+
+
+div.checker {
+    width: 18px;
+    height: 18px
+}
+
+div.checker input,
+div.checker span {
+    width: 18px;
+    height: 18px
+}
+
+div.checker span {
+    display: -moz-inline-box;
+    display: inline-block;
+    zoom: 1;
+    text-align: center;
+    background-position: 0 -260px;
+}
+
+div.checker, div.checker input, div.checker span {
+    width: 19px;
+    height: 19px;
+}
+
+div.checker, div.radio, div.uploader {
+    position: relative;
+}
+
+div.button, div.button *, div.checker, div.checker *, div.radio, div.radio *, div.selector, div.selector *, div.uploader, div.uploader * {
+    margin: 0;
+    padding: 0;
+}
+
+div.button, div.checker, div.radio, div.selector, div.uploader {
+    display: -moz-inline-box;
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+}
+
+.card {
+    padding: 25px;
+    margin-bottom: 20px;
+    border: initial;
+    background: #22223b;
+    border-radius: calc(.15rem - 1px);
+    box-shadow: 0 1px 15px rgba(0,0,0,0.04), 0 1px 6px rgba(0,0,0,0.04);
+}
+
+
+.card-body .add-task{
+	height: 2rem;
+    padding-left: 20px;
+    margin-left: 1rem;
+    border-radius: 5px;
+}

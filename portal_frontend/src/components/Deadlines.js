@@ -5,7 +5,7 @@ import DeadlineComponent from './DeadlineComponent'
 
 
 
-const Deadlines = ({ examList }) => {
+const Deadlines = ({ examList, user }) => {
     const [examForm, setExamForm] = useState(false)
     const [addLabel, setAddLabel] = useState('Add')
 
@@ -18,9 +18,9 @@ const Deadlines = ({ examList }) => {
         <div id="timeline_container">
             <header>
                 <figure>
-                    <img src="https://placeimg.com/480/480/poeple/sepia"></img>
+                    <img src="https://cdn0.iconfinder.com/data/icons/human-immune-system/237/normal-immune-vaccinated-001-512.png"></img>
                 </figure>
-                <h1>DEADLINES <br /> Student Name</h1>
+                <h1>DEADLINES <br />{user.name}</h1>
             </header>
             <div className="addExam" onClick={onAdd}>{addLabel}</div>
             {examForm && <AddExam />}

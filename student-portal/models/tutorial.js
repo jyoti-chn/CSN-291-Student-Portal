@@ -1,19 +1,10 @@
 const mongoose = require('mongoose')
 
 const tutorialSchema = new mongoose.Schema({
-  subject: {
+  content: {
     type: String,
     required: true,
     minlength: 5
-  },
-  date: {
-    type: String,
-    required: true,
-  },
-  syllabus : {
-    type : String,
-    required:true,
-    minlength:5
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,

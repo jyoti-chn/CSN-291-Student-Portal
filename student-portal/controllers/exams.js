@@ -32,12 +32,13 @@ examsRouter.post('/', async (request, response, next) => {
   const body = request.body
 
   const token = getTokenFrom(request)
+  // console.log('hello')
   const decodedToken = jwt.verify(token, process.env.SECRET)
   if (!token || !decodedToken.id) {
     return response.status(401).json({ error: 'token missing or invalid' })
   }
 
-  console.log(decodedToken.id)
+  // console.log(decodedToken.id)
 
   const user = await User.findById(decodedToken.id)
 
