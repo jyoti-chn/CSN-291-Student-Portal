@@ -12,6 +12,7 @@ import HomePage from './components/HomePage';
 import Profile from './components/Profile';
 import Deadlines from './components/Deadlines';
 import ToDoList from './components/ToDolist';
+import Timetable from './components/TimeTable';
 
 
 const App = () => {
@@ -27,7 +28,14 @@ const App = () => {
   const [myProfile, setProfile] = useState(false)
 
 
-    document.body.style.backgroundColor = '#fffff';
+   if(home){
+     document.body.style.backgroundImage = 'url(https://image.freepik.com/free-vector/purple-geometric-background_1199-200.jpg)'
+     document.body.style.backgroundSize = 'cover'
+     
+   }
+   else{
+    document.body.style.background = '#0e1219'
+   }
   
 
 
@@ -58,16 +66,19 @@ const App = () => {
     }
   }, [])
 
+  console.log(tt)
   return (
     <div>
       <div>
         
         {!user && <LoginForm username={username} setUsername={setUsername} password={password} setPassword={setPassword} setUser={setUser} />}
-        {user && <NavBar setDeadlines={setDeadlines} setHome={setHome} setProfile={setProfile} setToDo={setToDo}/>}
+        {user && <NavBar setDeadlines={setDeadlines} setHome={setHome} setProfile={setProfile} setToDo={setToDo} setTT={setTT}/>}
         {user && deadlines && <Deadlines examList={examList} user={user}/>}
         {user && home && <HomePage/>}
-        {user && myProfile && <Profile/>}
+        {user && myProfile && <Profile user={user}/>}
         {user && todo && <ToDoList notes={notes} user={user}/>}
+        {user && tt && <Timetable/>}
+
 
       </div>
 

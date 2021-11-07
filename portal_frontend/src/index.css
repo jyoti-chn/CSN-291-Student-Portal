@@ -9,10 +9,15 @@
 .hero {
 	height: 100%;
 	width: 100%;
-	/* background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(loginBackground.jpg); */
+	/* background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(LoginBackground.jpg);  */
 	background-position: center;
 	background-size: cover;
 	position: absolute;
+}
+
+body{
+	background-repeat: no-repeat;
+	overflow-x: hidden;
 }
 
 .form-box {
@@ -53,13 +58,13 @@ button:hover {
 	position: absolute;
 	width: 110px;
 	height: 100%;
-	background: linear-gradient(to right, #ff105f, #ffad06);
+	background: linear-gradient(to right, #ea91d7, #520570);
 	border-radius: 30px;
 	transition: .20s;
 }
 
 .input-group {
-	top: 180px;
+	top: 150px;
 	position: absolute;
 	width: 280px;
 	transition: .20s;
@@ -83,7 +88,7 @@ button:hover {
 	cursor: pointer;
 	display: block;
 	margin: 30px;
-	background: linear-gradient(to right, #ff105f, #ffad06);
+	background: linear-gradient(to right, #ea91d7, #520570);
 	border: 0;
 	outline: none;
 	border-radius: 30px;
@@ -154,7 +159,8 @@ body {
 }
 
 .home-header {
-	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://www.ice.gov/sites/default/files/2021-01/SEVP.jpg);
+	/* //background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://www.ice.gov/sites/default/files/2021-01/SEVP.jpg); */
+	/* background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(HomeBackground.jpg); */
 	height: 100vh;
 	-webkit-background-size: cover;
 	background-size: cover;
@@ -165,20 +171,22 @@ body {
 
 .nav-area li {
 	display: inline-block;
+	border-right: 0    
 }
 
 .nav-area li {
-	color: #fff;
+	color: rgb(231, 221, 221);
 	text-decoration: none;
-	padding: 5px 20px;
+	padding: 20px 20px;
 	font-family: poppins;
 	font-size: 16px;
 	text-transform: uppercase;
 }
 
 .nav-area li:hover {
-	background: #fff;
-	color: #333;
+	background: #d57b9e;   /*EDIT_1*/
+	color: rgb(253, 253, 253);
+	transition: 0.3s ease;
 }
 
 .logo {
@@ -187,9 +195,12 @@ body {
 
 .logo img {
 	width: 25%;
-	padding: 15px 0;
-	opacity: 0.85;
-	border-radius: 50px 50px;
+    padding: 15px 0;
+    opacity: 0.85;
+    border-radius: 50px 50px;
+    margin-right: 0rem;
+    position: relative;
+    left: -7rem;
 }
 
 .welcome-text {
@@ -240,11 +251,11 @@ body {
 		margin: auto;
 	}
 	img {
-		width: ;
+		width: 0;
 	}
 	.nav-area {
 		float: none;
-		margin-top: 0;
+		margin-top: 10px;
 	}
 	.nav-area li a {
 		padding: 5px;
@@ -315,12 +326,13 @@ body {
 	box-sizing:border-box;
 }
 body {
-	background:#ebe7e4;
-	color:#6d6a6dbe;
+	background:#ffffff;
+	color:#ffffffff;
+	text-shadow:rgb(5, 2, 2);
 	font-size:13px;
 	font-family:helvetica,arial,sans-serif;
 	overflow-y:scroll;
-    background-color:#ffffff;
+    background-color:#0f0f0f;
 }
 body > header {
 	width:100%;
@@ -406,9 +418,13 @@ body > header nav ul#nav_ctrl {
 }
 	
 div#timeline_container {
-	width:960px;
-	margin:120px auto;
-	position:relative;
+	width: 1500px;
+	margin: 0px ;
+	position: relative;
+	/* background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(DeadlineBackground.jpg); */
+	background-repeat: no-repeat;   /*EDIT_2*/
+	background-size: cover;
+	background-attachment: fixed;
 }
 div#timeline_container header {
 	position:relative;
@@ -418,7 +434,7 @@ div#timeline_container header figure {
 	width:200px;
 	height:200px;
 	border-radius:50%;
-	border:5px solid #cdc9c6;
+	border:5px solid #fff;  
 	overflow:hidden;
 	display:block;
 	margin:0 auto;
@@ -430,7 +446,8 @@ div#timeline_container header h1 {
 	position:absolute;
 	top:50px;
 	right:80px;
-	font-family: 'Fira Mono', monospace;
+	font-family:helvetica,arial,sans-serif;
+	color:rgb(250, 248, 248);
 	font-size:2rem;
 	font-weight:normal;
 }
@@ -475,12 +492,12 @@ div#timeline_container > ul > li div {
 div#timeline_container > ul li > div.event_icn {
 	padding:0.3em;
 	font-size:1.7em;
-	border-radius:50%;
-	background:#ebe7e4;
+	border-radius:100%;
+	background:#f1eeec;
 	border:3px solid #cdc9c6;
 	margin-left:-22px;
 	color:rgba(85,86,86,0.3);
-	box-shadow:1px 1px 1px white;
+	box-shadow:4px 4px 4px rgb(8, 8, 8);
 
 	-webkit-transition:all 0.3s ease-in-out;
 	-moz-transition:all 0.3s ease-in-out;
@@ -490,7 +507,7 @@ div#timeline_container > ul li > div.event_icn {
 
 div#timeline_container > ul > li div.event_icn,div#timeline_container > ul li.active div.event_icn{color:white;}
 
-div#timeline_container > ul > li.life_event div.event_icn { background:#0ED1E7;}
+div#timeline_container > ul > li.life_event div.event_icn { background: #e48fb0;}
 
 div#timeline_container > ul > li.education_event div.event_icn { background:#394a51}
 
@@ -508,11 +525,11 @@ div#timeline_container > ul > li.portfolio_event:hover div.event_icn,div#timelin
 div#timeline_container > ul > li div.event_content {
 	width:400px;
 	padding:1em 2em 1.3em;
-	border:1px solid #DDDBDA;
+	border:3px solid #0a0a0a;
 	border-radius:10px;
 	top:-2em;
 	
-	background:white;
+	background:linear-gradient(to right, #ea91d7, #520570);
 	-webkit-transition:all 0.3s ease-in-out;
 	-moz-transition:all 0.3s ease-in-out;
 	-o-transition:all 0.3s ease-in-out;
@@ -583,7 +600,7 @@ div#timeline_container > ul > li div.event_date {
 	width:180px;
 	text-align:right;
 	font-size:1.2em;
-	text-shadow:1px 1px 1px white;
+	text-shadow:1px 1px 1px rgb(5, 5, 5);
 	
 	font-weight:bold;
 	-webkit-transition:all 0.3s ease-in-out;
@@ -646,14 +663,16 @@ footer a.icon-down-circled {
 
 .addExam{
 	position: absolute;
-    margin-left: 28.5rem;
-    margin-top: 5rem;
+    margin-left: 45.3rem;
+    margin-top: 0.9rem;
     background: #ffffff;
     padding: 6px;
     width: 3rem;
     text-align: center;
     border-radius: 5px;
-	cursor:pointer;
+    cursor: pointer;
+    z-index: 800;
+    color: black;
 }
 
 .addExam:hover{
@@ -669,20 +688,23 @@ html {
 	margin:0;
 	padding:0;
 	font-family: sans-serif;
-	background: #22223b;
+	/* //background: #ffffff; */
+	/* background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(ToDoListBackground.jpg);  */
+	background-size: cover;
   }
   
   .login-box {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 400px;
-	padding: 40px;
-	transform: translate(-50%, -50%);
-	background: rgba(0,0,0,.5);
-	box-sizing: border-box;
-	box-shadow: 0 15px 25px rgba(0,0,0,.6);
-	border-radius: 10px;
+    top: 2rem;
+    left: 17rem;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgb(0 0 0 / 60%);
+    border-radius: 10px;
+    z-index: 800;
   }
   
   .login-box h2 {
@@ -844,7 +866,9 @@ html {
     padding: 15px;
     margin: 1.5rem 1rem;
     border-radius: 8px;
-    background: #9A8C98
+	background: #EEF5DB;
+	border:3px solid #0a0a0a;
+    /* //background: linear-gradient(to right, #ff105f,#ffad06); */
 }
 
 .todo-list.only-active .todo-item.complete {
@@ -932,7 +956,7 @@ div.button, div.checker, div.radio, div.selector, div.uploader {
     padding: 25px;
     margin-bottom: 20px;
     border: initial;
-    background: #22223b;
+	background: transparent;
     border-radius: calc(.15rem - 1px);
     box-shadow: 0 1px 15px rgba(0,0,0,0.04), 0 1px 6px rgba(0,0,0,0.04);
 }
@@ -943,4 +967,115 @@ div.button, div.checker, div.radio, div.selector, div.uploader {
     padding-left: 20px;
     margin-left: 1rem;
     border-radius: 5px;
+}
+
+
+.hero{
+	height: 100%;
+	width: 100%;
+}
+.timetable h1 {
+  text-align: center;
+  margin-top: 2rem;
+  color: #FFFFFF;
+}
+
+.myTimetable {
+  margin: auto;
+  margin-top: 54px;
+  width:65%;
+  height:85%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.myTimetable thead{
+  color: rgb(162, 119, 241);
+  font-size: 20px;
+}
+
+.myTimetable tbody {
+  background-color: 90caf9;
+}
+
+
+button:hover{
+	opacity: 0.7;
+}
+.myTimetable td {
+  border: 1px solid black;
+  border-radius: 4px;
+  color: white;
+  padding: 6px;
+  border-radius: 3px;
+  text-align: center;
+}
+.myTimetable tbody tr td:first-child {
+  background-color: #000066;
+  background: transparent;
+  font-weight: bold;
+}
+
+.lunch {
+  background-color: e3f2fd !important;
+  font-style: italic;
+}
+
+.subject {
+  font-size: 12pt;
+  margin-bottom:0px;
+}
+
+.room {
+  font-size: 10pt;
+  font-style: italic;
+  
+}
+
+
+
+.student-profile .card {
+    border-radius: 10px;
+}
+
+.student-profile .card .card-header .profile_img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px;
+    border: 10px solid #ccc;
+    border-radius: 50%;
+	margin-left: 2rem;
+}
+
+.student-profile .card h3 {
+    font-size: 20px;
+    font-weight: 700;
+	margin-left: 38rem;
+}
+
+.student-profile .card p {
+	
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+.student-profile .table th,
+.student-profile .table td {
+    font-size: 14px;
+    padding: 5px 10px;
+    color: rgb(255, 255, 255);
+}
+.card .shadow-sm{
+	display: flex;
+}
+
+.card-body table{
+	margin-left: 28.6rem;
+}
+.col-lg-4 .card-body{
+	margin-left: 35rem;
+}
+.col-lg-8 .card .shadow-sm{
+	text-align: center;
 }

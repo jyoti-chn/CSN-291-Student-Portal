@@ -14,6 +14,7 @@ const Deadlines = ({ examList, user }) => {
         if (addLabel === 'Close') setAddLabel('Add')
         setExamForm(!examForm)
     }
+    console.log(examForm)
     return (
         <div id="timeline_container">
             <header>
@@ -22,11 +23,11 @@ const Deadlines = ({ examList, user }) => {
                 </figure>
                 <h1>DEADLINES <br />{user.name}</h1>
             </header>
-            <div className="addExam" onClick={onAdd}>{addLabel}</div>
-            {examForm && <AddExam />}
+            {user.profession[0]==='Professor'&&<div className="addExam" onClick={onAdd}>{addLabel}</div>}
+            {examForm && <AddExam/>}
             {/* {examList.map(e => <DeadlineComponent firstHead={e.subject} firstContent={e.syllabus} firstDate={e.date} secondHead={e.subject} secondContent={e.syllabus} secondDate={e.date} />)} */}
             {
-                examList.reduce(
+                examList.slice(0).reverse().reduce(
                     function (accumulator, currentValue, currentIndex, array) {
                         if (currentIndex % 2 === 0)
                             accumulator.push(array.slice(currentIndex, currentIndex + 2));

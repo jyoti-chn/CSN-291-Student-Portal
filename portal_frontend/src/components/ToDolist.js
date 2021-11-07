@@ -37,7 +37,7 @@ const ToDoList = ({ notes, user }) => {
                             <div class="todo-list">
                                 {notes.map(m => {
                                     return (
-                                        user.name === m.user.name && <ToDoComponent note={m} key={m.id} user={user} />
+                                      user.name === m.user.name && <ToDoComponent note={m} key={m.id} user={user} />
                                     )
                                 })}
                             </div>

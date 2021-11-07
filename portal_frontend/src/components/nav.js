@@ -1,11 +1,12 @@
 import React from "react";
 
-const NavBar = ({setDeadlines, setHome, setProfile, setToDo}) => {
+const NavBar = ({setDeadlines, setHome, setProfile, setToDo, setTT}) => {
 
     const goToHome = () =>{
         setDeadlines(false)
         setHome(true)
         setProfile(false)
+        setTT(false)
         setToDo(false)
     }
 
@@ -13,20 +14,34 @@ const NavBar = ({setDeadlines, setHome, setProfile, setToDo}) => {
         setDeadlines(true)
         setHome(false)
         setProfile(false)
+        setTT(false)
         setToDo(false)
     }
     const goToProfile = () =>{
         setDeadlines(false)
         setHome(false)
-        setProfile(true)
+        setTT(false)
         setToDo(false)
+        setProfile(true)
+        
+
     }
 
     const goToDo = () =>{
         setDeadlines(false)
         setHome(false)
         setProfile(false)
+        setTT(false)
         setToDo(true)
+    }
+
+    const goToTimeTable = () =>{
+        setDeadlines(false)
+        setHome(false)
+        setProfile(false)
+        setToDo(false)
+        setTT(true)
+
     }
 
     const logout = () => {
@@ -35,16 +50,16 @@ const NavBar = ({setDeadlines, setHome, setProfile, setToDo}) => {
         return
       }
 
+
    return (
        <div style={{backgroundColor:'black'}}>
            <ul class="nav-area">
             <li onClick={goToHome}>Home</li>
-            <li>Timetable</li>
             <li onClick={goToDeadlines}>Deadlines</li>
             <li onClick={goToProfile}>Profile</li>
             <li onClick={goToDo}>To-Do List</li>
             <li className='log-out' onClick={logout}>Log Out</li>
-            <li>Contact</li>
+            <li onClick={goToTimeTable}>Timetable</li>
           </ul>
            
        </div>

@@ -15,7 +15,7 @@ const ToDoComponent = ({note, user}) => {
         <div class="todo-item">
             <div class="checker"><span class=""><input type="checkbox"></input></span></div>
             <span class="note">{note.content}</span>
-            <i class="fa fa-close" style={{right:'5rem', position:'absolute', cursor:'pointer'}} onClick={deleteNote}>X</i>
+            <i class="fa fa-close" style={{right:'5rem', position:'absolute', cursor:'pointer', color:'black'}} onClick={deleteNote}>X</i>
         </div>
     )
 }
