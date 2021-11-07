@@ -1079,3 +1079,14 @@ button:hover{
 .col-lg-8 .card .shadow-sm{
 	text-align: center;
 }
+
+.cal{
+	position: relative;
+	margin-top: 10rem;
+	margin-left: 2rem;
+	width:30rem;
+}
+.cal-page{
+	position: relative;
+	display: flex;
+}

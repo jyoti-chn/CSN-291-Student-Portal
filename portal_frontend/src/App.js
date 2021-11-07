@@ -13,6 +13,7 @@ import Profile from './components/Profile';
 import Deadlines from './components/Deadlines';
 import ToDoList from './components/ToDolist';
 import Timetable from './components/TimeTable';
+import CalComponent from './components/Calendar';
 
 
 const App = () => {
@@ -26,17 +27,18 @@ const App = () => {
   const [todo, setToDo] = useState(false)
   const [tt, setTT] = useState(false)
   const [myProfile, setProfile] = useState(false)
+  const [calend, setcalend] = useState(false)
 
 
-   if(home){
-     document.body.style.backgroundImage = 'url(https://image.freepik.com/free-vector/purple-geometric-background_1199-200.jpg)'
-     document.body.style.backgroundSize = 'cover'
-     
-   }
-   else{
+  if (home) {
+    document.body.style.backgroundImage = 'url(https://image.freepik.com/free-vector/purple-geometric-background_1199-200.jpg)'
+    document.body.style.backgroundSize = 'cover'
+
+  }
+  else {
     document.body.style.background = '#0e1219'
-   }
-  
+  }
+
 
 
 
@@ -48,12 +50,12 @@ const App = () => {
       })
   }, [])
 
-  useEffect(()=>{
+  useEffect(() => {
     noteService
-    .getNotes()
-    .then(responseNotes => {
-      setNotes(responseNotes)
-    })
+      .getNotes()
+      .then(responseNotes => {
+        setNotes(responseNotes)
+      })
   }, [])
 
   useEffect(() => {
@@ -66,25 +68,33 @@ const App = () => {
     }
   }, [])
 
+  const DeadlineComp = () =>{
+    return (
+      <Deadlines examList={examList} user={user}/>
+    )
+  }
+
   console.log(tt)
   return (
-    <div>
+    <Router>
       <div>
-        
-        {!user && <LoginForm username={username} setUsername={setUsername} password={password} setPassword={setPassword} setUser={setUser} />}
-        {user && <NavBar setDeadlines={setDeadlines} setHome={setHome} setProfile={setProfile} setToDo={setToDo} setTT={setTT}/>}
-        {user && deadlines && <Deadlines examList={examList} user={user}/>}
-        {user && home && <HomePage/>}
-        {user && myProfile && <Profile user={user}/>}
-        {user && todo && <ToDoList notes={notes} user={user}/>}
-        {user && tt && <Timetable/>}
+        <div>
+
+          {!user && <LoginForm username={username} setUsername={setUsername} password={password} setPassword={setPassword} setUser={setUser} />}
+          {user && <NavBar setDeadlines={setDeadlines} setHome={setHome} setProfile={setProfile} setToDo={setToDo} setTT={setTT} setcalend={setcalend} />}
+          {user && deadlines && <Deadlines examList={examList} user={user} />}
+          {user && home && <HomePage />}
+          {user && myProfile && <Profile user={user} />}
+          {user && todo && <ToDoList notes={notes} user={user} />}
+          {user && tt && <Timetable />}
+          {user && calend && <CalComponent examList={examList}/>}
+
+
+        </div>
 
 
       </div>
-
-
-    </div>
-
+    </Router>
   );
 }
 
