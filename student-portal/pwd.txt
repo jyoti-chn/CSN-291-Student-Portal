@@ -1,1 +1,0 @@
-mongodb+srv://Anna:${password}@cluster0.m1shn.mongodb.net/Phonebook-app?retryWrites=true&w=majority

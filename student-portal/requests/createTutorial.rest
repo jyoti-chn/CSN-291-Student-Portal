@@ -1,7 +1,0 @@
-POST http://localhost:3001/api/tuts/
-Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJlY2siLCJpZCI6IjYxNzFhOWQ4ZGU4OTI4OWYxM2ZlNDUyYSIsImlhdCI6MTYzNjIzMDIyNywiZXhwIjoxNjM2NDQ2MjI3fQ.UFxUNPIiRY6m51g9JmXi-RbMuE55jIkzCrUO0ATYdZI
-
-{
-   "content" : "homework"
-}

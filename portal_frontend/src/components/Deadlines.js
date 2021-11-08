@@ -21,7 +21,7 @@ const Deadlines = ({ examList, user }) => {
                 <figure>
                     <img src="https://cdn0.iconfinder.com/data/icons/human-immune-system/237/normal-immune-vaccinated-001-512.png"></img>
                 </figure>
-                <h1>DEADLINES <br />{user.name}</h1>
+                <h1>DEADLINES <br />{user.name} <br/> {user.profession[0]}</h1>
             </header>
             {user.profession[0]==='Professor'&&<div className="addExam" onClick={onAdd}>{addLabel}</div>}
             {examForm && <AddExam/>}
