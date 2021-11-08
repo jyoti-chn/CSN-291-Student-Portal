@@ -1,6 +1,6 @@
 import React from "react";
 // import '../style/style.scss'
-const HomePage = () => {
+const HomePage = ({user}) => {
   return (
     <div>
       <header className='home-header'>
@@ -12,7 +12,7 @@ const HomePage = () => {
         </div>
         <div class="welcome-text">
           <h1>Student <span>Portal</span></h1>
-          <a href="#">KNOW MORE</a>
+          <p className='welcome'>Welcome, {user.name}.</p>
         </div>
       </header>
     </div>

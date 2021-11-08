@@ -71,7 +71,6 @@ const NavBar = ({ setDeadlines, setHome, setProfile, setToDo, setTT, setcalend }
             <ul class="nav-area">
                 <li onClick={goToHome}>Home</li>
                 <li onClick={goToDeadlines}>Deadlines</li>
-                <li onClick={goToProfile}>Profile</li>
                 <li onClick={goToDo}>To-Do List</li>
                 <li onClick={goToTimeTable}>Timetable</li>
                 <li onClick={goTocalendar}>Calendar</li>

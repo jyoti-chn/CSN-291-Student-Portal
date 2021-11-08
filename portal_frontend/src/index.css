@@ -475,7 +475,7 @@ div#timeline_container > ul > li {
 	position:relative;
 	padding:.3em 0;
 	min-height:230px;
-	cursor:pointer;
+	
 	
 	-webkit-transition:all 0.3s ease-out;
 	-moz-transition:all 0.3s ease-out;
@@ -1090,3 +1090,126 @@ button:hover{
 	position: relative;
 	display: flex;
 }
+
+.cal button abbr{
+	color: black;
+}
+
+.cal-deadline{
+	background-color: rgba(0,0,0,.5);
+    margin-left: 13rem;
+    height: fit-content;
+    margin-top: 10rem;
+    box-shadow: 0 15px 25px rgb(0 0 0 / 60%);
+    border-radius: 10px;
+    width: 25rem;
+}
+
+.cal-deadline h3{
+	text-align: center;
+    font-size: 23px;
+    margin-top: 11px;
+}
+
+.cal-deadline ul{
+	margin-top: 10px;
+}
+.assgn-name{
+	color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.delete-tut1 {
+	border-radius: 50%;
+    padding: 0.5em;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #0c0c0e;
+    color: #111114;
+    position: absolute;
+    margin-left: 20rem;
+    margin-top: -40px;
+    background: transparent;
+	cursor: pointer;
+  }
+  .delete-tut1:hover {
+	border: 2px solid rgb(231, 134, 183);
+	background-color: rgb(247, 110, 206);
+	color: #ffffff;
+	transition: 0.3s ease;
+  }
+  
+  .delete-tut1::before {
+	content: " ";
+	position: absolute;
+	display: block;
+	background-color: rgb(13, 13, 14);
+	width: 2px;
+	left: 12px;
+	top: 5px;
+	bottom: 5px;
+	transform: rotate(45deg);
+  }
+  .delete-tut1::after {
+	content: " ";
+	position: absolute;
+	display: block;
+	background-color: rgb(3, 3, 3);
+	height: 2px;
+	top:12px;
+	left: 5px;
+	right: 5px;
+	transform: rotate(45deg);
+  }
+
+  
+
+/* tut 2 */
+.delete-tut2 {
+	border-radius: 50%;
+    padding: 0.5em;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #0c0c0e;
+    color: #111114;
+    position: absolute;
+    margin-left: -22rem;
+    margin-top: -40px;
+    background: transparent;
+	cursor: pointer;
+  }
+  .delete-tut2:hover {
+	border: 2px solid rgb(231, 134, 183);
+	background-color: rgb(182 43 177);
+	color: #ffffff;
+	transition: 0.3s ease;
+  }
+  
+  .delete-tut2::before {
+	content: " ";
+	position: absolute;
+	display: block;
+	background-color: rgb(13, 13, 14);
+	width: 2px;
+	left: 12px;
+	top: 5px;
+	bottom: 5px;
+	transform: rotate(45deg);
+  }
+  .delete-tut2::after {
+	content: " ";
+	position: absolute;
+	display: block;
+	background-color: rgb(3, 3, 3);
+	height: 2px;
+	top:12px;
+	left: 5px;
+	right: 5px;
+	transform: rotate(45deg);
+  }
+
+  .welcome{
+	  font-size: 2rem;
+	  margin-top: 10px;
+  }

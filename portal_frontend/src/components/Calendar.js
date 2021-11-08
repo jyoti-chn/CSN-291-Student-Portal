@@ -26,7 +26,7 @@ const CalComponent = ({examList}) => {
 const CalDeadline = ({e}) =>{
     // console.log(e)
     return (
-        <div>{(date1===e.date|| date2===e.date) && e.subject}</div>
+        <div className='assgn-name'>{(date1===e.date|| date2===e.date) && e.subject}</div>
     )
 }
 
@@ -34,6 +34,7 @@ const CalDeadline = ({e}) =>{
         <div className='cal-page'>
             <Calendar className='cal' onChange={handleDate} />
             <div className='cal-deadline'>
+                <h3>Deadlines:</h3>
                 <ul>
                     {examList.map(e => <CalDeadline key={e.id} e={e}/> )}
                 </ul>

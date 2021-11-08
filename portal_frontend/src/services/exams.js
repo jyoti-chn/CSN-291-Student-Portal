@@ -22,4 +22,9 @@ const createExam = async newObject => {
     return response.data
 }
 
-export default { getExams, createExam, setToken }
+const deleteTut = async (id) =>{
+    const response = await axios.delete(`${baseURL}/${id}`)
+    return response
+}
+
+export default { getExams, createExam, setToken, deleteTut }

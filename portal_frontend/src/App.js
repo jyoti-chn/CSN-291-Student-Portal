@@ -83,8 +83,7 @@ const App = () => {
           {!user && <LoginForm username={username} setUsername={setUsername} password={password} setPassword={setPassword} setUser={setUser} />}
           {user && <NavBar setDeadlines={setDeadlines} setHome={setHome} setProfile={setProfile} setToDo={setToDo} setTT={setTT} setcalend={setcalend} />}
           {user && deadlines && <Deadlines examList={examList} user={user} />}
-          {user && home && <HomePage />}
-          {user && myProfile && <Profile user={user} />}
+          {user && home && <HomePage user={user} />}
           {user && todo && <ToDoList notes={notes} user={user} />}
           {user && tt && <Timetable />}
           {user && calend && <CalComponent examList={examList}/>}
