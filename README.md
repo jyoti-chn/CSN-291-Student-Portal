@@ -57,7 +57,7 @@ This is an example of how to list things you need to use the software and how to
   npm install npm@latest -g
   ```
   
- * npm
+ * nodemon
    ```sh
    npm install -g nodemon
    ```

@@ -4,7 +4,7 @@ const tutorialSchema = new mongoose.Schema({
   content: {
     type: String,
     required: true,
-    minlength: 5
+    minlength: 2
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,

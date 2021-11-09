@@ -4,7 +4,7 @@ const examSchema = new mongoose.Schema({
   subject: {
     type: String,
     required: true,
-    minlength: 5
+    minlength: 2
   },
   date: {
     type: String,
@@ -13,7 +13,7 @@ const examSchema = new mongoose.Schema({
   syllabus : {
     type : String,
     required:true,
-    minlength:5
+    minlength:1
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,

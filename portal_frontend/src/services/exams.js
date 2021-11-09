@@ -16,9 +16,9 @@ const createExam = async newObject => {
         headers: { Authorization: token },
     }
     console.log(newObject)
-
+    
     const response = await axios.post(baseURL, newObject, config)
-    // console.log('hello')
+    console.log(response.data)
     return response.data
 }
 

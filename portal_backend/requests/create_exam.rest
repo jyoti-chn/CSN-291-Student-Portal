@@ -1,9 +1,9 @@
 POST http://localhost:3001/api/exams/
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJlY2siLCJpZCI6IjYxNzFhOWQ4ZGU4OTI4OWYxM2ZlNDUyYSIsImlhdCI6MTYzNTk2MTk3NiwiZXhwIjoxNjM2MTc3OTc2fQ.9eaJMNFLSoxcaAc3sTATH4TdwYB9vd3kX4t0KoBgm4U
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRlbW91c2VyIiwiaWQiOiI2MTg4YmFiMTYwZjVjMjQzYjY2YTU3NzkiLCJpYXQiOjE2MzYzODI4NDUsImV4cCI6MTYzNjU5ODg0NX0.7Bk5MZ5yaN2fjucywBPsQ742CsnDyBytEXLPjj4Co9Y
 
 {
-   "subject": "New exam 2",
-    "date": "5/11/2021",
-    "syllabus": "Chapter 5"
+   "subject": "Eco tut",
+    "date": "10/11/2021",
+    "syllabus": "Chapter 2"
 }
