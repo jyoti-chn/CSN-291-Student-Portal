@@ -98,7 +98,7 @@ const LoginForm = ({ username, setUsername, password, setPassword, setUser }) =>
                 <input type="email" className="input-field" placeholder="Email ID" required onChange={({ target }) => setEmail(target.value)} />
                 <input type="text" className="input-field" placeholder="User Name" required onChange={({ target }) => setNewUserName(target.value)} />
                 <input type="text" className="input-field" placeholder="Full Name" required onChange={({ target }) => setNewName(target.value)} />
-                <input type="text" className="input-field" placeholder="Profession" required onChange={({ target }) => setnewProfession(target.value)} />
+                <input type="text" className="input-field" placeholder="Profession-Student/Professor" required onChange={({ target }) => setnewProfession(target.value)} />
                 <input type="password" className="input-field" placeholder="Password" required onChange={({ target }) => setNewpassword(target.value)} />
                 <input type="checkbox" className="checkbox" /><span>Remember me</span>
                 <button type="submit" className="submit-btn">Register</button>

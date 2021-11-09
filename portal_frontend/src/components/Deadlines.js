@@ -32,7 +32,7 @@ const Deadlines = ({ examList, user }) => {
                         if (currentIndex % 2 === 0)
                             accumulator.push(array.slice(currentIndex, currentIndex + 2));
                         return accumulator;
-                    }, []).map(e => <DeadlineComponent firstHead={e[0].subject} firstContent={e[0].syllabus} firstDate={ e[0].date} secondHead={e[1] && e[1].subject} secondContent={e[1] && e[1].syllabus} secondDate={e[1] && e[1].date} firstTut={e[0]} secondTut={e[1]} />)}
+                    }, []).map(e => <DeadlineComponent firstHead={e[0].subject} firstContent={e[0].syllabus} firstDate={ e[0].date} secondHead={e[1] && e[1].subject} secondContent={e[1] && e[1].syllabus} secondDate={e[1] && e[1].date} firstTut={e[0]} secondTut={e[1]} user={user} />)}
         </div>
 
     )

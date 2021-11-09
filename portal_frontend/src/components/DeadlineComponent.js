@@ -5,18 +5,23 @@ const DeadlineComponent = (props) => {
 
     const deleteTut1 = async () =>{
         try{
+        if(props.user.profession[0]==='Professor'){
         await examService.deleteTut(props.firstTut.id)
         window.location.reload()
+        }
         }
         catch{
             console.log('Unable to delete')
         }
+        
     }
 
     const deleteTut2 = async () =>{
         try{
+            if(props.user.profession[0]==='Professor'){
         await examService.deleteTut(props.secondTut.id)
         window.location.reload()
+            }
         }
         catch{
             console.log('Unable to delete')
