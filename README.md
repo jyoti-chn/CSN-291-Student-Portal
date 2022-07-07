@@ -120,13 +120,7 @@ View the class timetable in the timetable tab and calendar in the calendar tab. 
 
 
 
-<!-- CONTACT -->
-## Contact
 
-email: [student.portal.iitr@gmail.com](student.portal.iitr@gmail.com)
-Project Link: [https://github.com/Shreshtha13/student_portal.git](https://github.com/Shreshtha13/student_portal.git)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
